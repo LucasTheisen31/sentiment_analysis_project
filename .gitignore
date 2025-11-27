@@ -35,10 +35,10 @@ __pycache__/
 *.pyo
 
 # Modelo treinado (arquivo grande)
-sentiment_analysis_project/api/assets/best_model_state.bin
 sentiment_analysis_project/api/assets/*.bin
 sentiment_analysis_project/api/assets/*.pth
 sentiment_analysis_project/api/assets/*.pt
+!sentiment_analysis_project/api/assets/.gitkeep
 
 # Modelos salvos nos notebooks
 notebooks_and_scripts/**/results/
