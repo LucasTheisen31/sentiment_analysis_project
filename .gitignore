@@ -92,12 +92,6 @@ local.properties
 **/ios/Flutter/Flutter.framework
 **/ios/Flutter/Flutter.podspec
 
-# ==================== VARIÁVEIS DE AMBIENTE ====================
-# Arquivos de configuração sensível
-.env
-*.env
-!.env.example
-
 # ==================== DOCKER ====================
 # Docker volumes e cache
 docker-compose.override.yml

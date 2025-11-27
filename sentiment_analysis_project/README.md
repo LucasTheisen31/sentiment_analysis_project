@@ -278,7 +278,6 @@ Content-Type: application/json
 - **Flutter 3.0+**: Framework UI multiplataforma
 - **Dart 3.0+**: Linguagem de programação
 - **MobX**: Gerenciamento de estado reativo
-- **flutter_dotenv**: Gerenciamento de variáveis de ambiente
 - **HTTP**: Cliente HTTP para comunicação com API
 - **flutter_rating_bar**: Widget de avaliação com estrelas
 - **animated_emoji**: Emojis animados para feedback visual
@@ -288,16 +287,16 @@ Content-Type: application/json
 
 ```
 comment_analysis_app/
-├── .env                                   # Variáveis de ambiente (não versionado)
+├── .env                                   # Variáveis de ambiente
 ├── lib/
-│   ├── main.dart                          # Entry point (carrega .env)
+│   ├── main.dart                          # Entry point
 │   ├── core/                              # Recursos compartilhados
 │   │   ├── env/
-│   │   │   └── env.dart                   # Singleton para flutter_dotenv
+│   │   │   └── env.dart                   # Configuração de ambiente
 │   │   ├── extensions/                    # Extension methods
 │   │   ├── global/
 │   │   │   └── constants/
-│   │   │       └── endpoints.dart         # URLs da API (usa Env)
+│   │   │       └── endpoints.dart         # URLs da API
 │   │   └── ui/                            # Componentes reutilizáveis
 ├── models/                                # Modelos de dados
 │   ├── review_model.dart                  # Avaliação local
@@ -429,12 +428,6 @@ Click "Salvar" → Action MobX → ReviewModel criado
 API_URL = http://localhost:8000
 ```
 
-**⚠️ Importante:** 
-- Crie o arquivo `.env` na raiz do projeto `comment_analysis_app/`
-- Adicione `.env` ao `.gitignore` para não versionar dados sensíveis
-- O arquivo `.env` é carregado automaticamente usando `flutter_dotenv`
-- Veja detalhes de implementação no README do `comment_analysis_app`
-
 ### Comandos Úteis
 
 **Backend:**
@@ -453,16 +446,13 @@ docker build -t sentiment-api ./api
 # Desenvolvimento local
 cd comment_analysis_app
 
-# 1. Criar arquivo .env
-echo "API_URL = http://localhost:8000" > .env
-
-# 2. Instalar dependências
+# 1. Instalar dependências
 flutter pub get
 
-# 3. Gerar código MobX
+# 2. Gerar código MobX
 flutter pub run build_runner build
 
-# 4. Executar no navegador
+# 3. Executar no navegador
 flutter run -d chrome
 
 # Build para produção
