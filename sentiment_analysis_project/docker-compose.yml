@@ -1,0 +1,14 @@
+services:
+  api_service:
+    build: ./api/.
+    container_name: container_sentiment_analysis_api
+    ports:
+      - "8000:8000"
+
+  web_service:
+    build: ./web/.
+    container_name: container_sentiment_analysis_web
+    ports:
+      - "8080:80"
+    depends_on:
+      - api_service

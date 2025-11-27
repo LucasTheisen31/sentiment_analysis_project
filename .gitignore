@@ -1,0 +1,190 @@
+# ============================================
+# Análise de Sentimentos - TCC
+# Repositório unificado: Frontend + Backend
+# ============================================
+
+# ==================== GERAL ====================
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.atom/
+*.swp
+
+# Logs
+*.log
+
+# ==================== PYTHON/BACKEND ====================
+# Ambiente virtual Python
+venv/
+env/
+ENV/
+.venv/
+
+# Bytecode Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Modelo treinado (arquivo grande)
+sentiment_analysis_project/api/assets/best_model_state.bin
+sentiment_analysis_project/api/assets/*.bin
+sentiment_analysis_project/api/assets/*.pth
+sentiment_analysis_project/api/assets/*.pt
+
+# Modelos salvos nos notebooks
+notebooks_and_scripts/**/results/
+notebooks_and_scripts/**/*_results/
+notebooks_and_scripts/**/*.bin
+notebooks_and_scripts/**/*.pth
+notebooks_and_scripts/**/*.pt
+notebooks_and_scripts/**/*.h5
+notebooks_and_scripts/**/*.pkl
+notebooks_and_scripts/**/*.joblib
+
+# Checkpoints de treinamento
+**/checkpoints/
+**/checkpoint_*.pt
+**/model_epoch_*.pt
+
+# Cache do Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==================== FLUTTER/FRONTEND ====================
+# Flutter build outputs
+**/build/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+
+# Dart/Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+
+# Obfuscation e symbolication
+app.*.map.json
+app.*.symbols
+
+# Android específico
+.gradle/
+local.properties
+*.keystore
+*.jks
+
+# iOS específico
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+
+# ==================== VARIÁVEIS DE AMBIENTE ====================
+# Arquivos de configuração sensível
+.env
+*.env
+!.env.example
+
+# ==================== DOCKER ====================
+# Docker volumes e cache
+docker-compose.override.yml
+
+# ==================== GIT ====================
+# Arquivos de merge
+*.orig
+*.rej
+
+# ==================== MISC ====================
+# Build logs e temporários
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# Datasets e dados brutos (arquivos grandes)
+notebooks_and_scripts/**/*.csv
+notebooks_and_scripts/**/datasets/
+notebooks_and_scripts/**/data/
+notebooks_and_scripts/**/*_dataset*.csv
+notebooks_and_scripts/**/reviews_*.csv
+
+# Exceções: manter datasets pequenos de exemplo (se houver)
+!notebooks_and_scripts/**/sample_*.csv
+!notebooks_and_scripts/**/example_*.csv
+
+# Resultados de experimentos
+notebooks_and_scripts/**/05_results/**/*.png
+notebooks_and_scripts/**/05_results/**/*.jpg
+notebooks_and_scripts/**/05_results/**/*.pdf
+notebooks_and_scripts/**/06_results/**/*.png
+notebooks_and_scripts/**/06_results/**/*.jpg
+notebooks_and_scripts/**/06_results/**/*.pdf
+
+# Arquivos temporários de notebooks
+notebooks_and_scripts/**/.ipynb_checkpoints/
+notebooks_and_scripts/**/*-checkpoint.ipynb
+notebooks_and_scripts/**/*.ipynb_checkpoints
+
+# Configurações específicas do usuário
+notebooks_and_scripts/**/pipeline_config.json
+notebooks_and_scripts/**/quick_config*.json
+notebooks_and_scripts/**/*_config.json
+!notebooks_and_scripts/**/pipeline_config_example.json
+
+# API Keys e credenciais (segurança)
+notebooks_and_scripts/**/*_api_key*.txt
+notebooks_and_scripts/**/*_credentials*.json
+notebooks_and_scripts/**/.env*
+!notebooks_and_scripts/**/.env.example
+
+# Arquivos de backup
+*~
+*.bak
+*.tmp
+*.temp
+
+# Node modules (caso use algum tooling JS)
+node_modules/
+
+# ==================== ARQUIVOS ESPECÍFICOS DO PROJETO ====================
+# Arquivo comprimido final para entrega
+analisesentimentosbert_produto.zip
+analisesentimentosbert_produto.tar
+analisesentimentosbert_produto.tar.gz
+analisesentimentosbert_produto.tar.xz
+*_produto.zip
+
+# Backups e versões antigas
+*_backup/
+*_old/
+*_deprecated/
+*.backup
+
+# Outputs de testes e debugging
+notebooks_and_scripts/**/output/
+notebooks_and_scripts/**/outputs/
+notebooks_and_scripts/**/debug/
+notebooks_and_scripts/**/temp/
+notebooks_and_scripts/**/tmp/
+
+# Cache do Jupyter
+.jupyter/
+notebooks_and_scripts/**/.jupyter/
+
+# Arquivos de cache do Python adicionais
+*.sage.py
+.pytype/
+cython_debug/

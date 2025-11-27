@@ -1,0 +1,12 @@
+{
+    "BASE_MODEL": "neuralmind/bert-base-portuguese-cased",
+    "PRE_TRAINED_MODEL": "assets/best_model_state.bin",
+    "CLASS_NAMES": [
+        "extremamente negativo",
+        "negativo",
+        "neutro",
+        "positivo",
+        "extremamente positivo"
+    ],
+    "MAX_SEQUENCE_LEN": 284
+}
