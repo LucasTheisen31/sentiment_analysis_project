@@ -1,4 +1,4 @@
-package br.com.lucastheisen.comment_analysis_app
+package br.com.lucastheisen.sentiment_analysis_app
 
 import io.flutter.embedding.android.FlutterActivity
 
