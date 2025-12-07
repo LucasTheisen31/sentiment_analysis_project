@@ -139,32 +139,50 @@ flowchart TB
 
 | Tecnologia | Versão | Propósito |
 |-----------|--------|-----------|
-| **Python** | 3.9+ | Linguagem base |
-| **FastAPI** | 0.95+ | Framework web assíncrono |
-| **PyTorch** | 2.0+ | Framework de Deep Learning |
-| **Transformers** | 4.30+ | Biblioteca Hugging Face (BERT) |
-| **Uvicorn** | Latest | Servidor ASGI |
-| **Pydantic** | 1.10+ | Validação de dados |
+| **Python** | 3.11 | Linguagem base |
+| **FastAPI** | 0.95+ | Framework web assíncrono de alta performance |
+| **PyTorch** | 2.1.2 (CPU) | Framework de Deep Learning otimizado |
+| **Transformers** | 4.36.2 | Biblioteca Hugging Face para modelos BERT |
+| **Uvicorn** | Latest | Servidor ASGI de alta performance |
+| **Pydantic** | Latest | Validação de dados e serialização |
 
 **Modelo de ML:**
-- **BERTimbau** (`neuralmind/bert-base-portuguese-cased`): Modelo BERT pré-treinado para português
-- Arquitetura: BERT + Dropout (0.3) + Linear (768 → 5 classes)
-- Comprimento máximo de sequência: 281 tokens
+- **BERTimbau Base** (`neuralmind/bert-base-portuguese-cased`): Modelo BERT pré-treinado em português brasileiro
+- **Arquitetura**: BERT (768) + Dropout (0.3) + Linear (768 → 5 classes)
+- **Otimizador**: AdamW (lr=3e-5, weight_decay=0.01)
+- **Épocas**: 10 com early stopping
+- **Batch Size**: 16
+- **Comprimento máximo**: 281 tokens
+- **Dataset**: 3000 avaliações balanceadas (5 classes)
 
 ### Frontend (Web App)
 
 | Tecnologia | Versão | Propósito |
 |-----------|--------|-----------|
-| **Flutter** | 3.0+ | Framework UI multiplataforma |
-| **Dart** | 2.19+ | Linguagem de programação |
-| **MobX** | 2.0+ | Gerenciamento de estado reativo |
-| **Dio** | Latest | Cliente HTTP |
+| **Flutter** | 3.0+ | Framework UI multiplataforma do Google |
+| **Dart** | 2.19+ | Linguagem de programação otimizada |
+| **MobX** | 2.0+ | Gerenciamento de estado reativo e observável |
+| **HTTP/Dio** | Latest | Cliente HTTP para comunicação com API |
+| **Google Fonts** | Latest | Tipografia moderna |
+| **Animated Emoji** | Latest | Feedback visual animado |
+
+### Machine Learning & Data Science
+
+| Tecnologia | Versão | Propósito |
+|-----------|--------|-----------|
+| **pandas** | 2.1.4 | Manipulação e análise de dados |
+| **numpy** | 1.26.4 | Computação numérica de alta performance |
+| **scikit-learn** | 1.3.2 | Algoritmos de ML e métricas de avaliação |
+| **matplotlib** | 3.8.2 | Visualização de dados (gráficos estáticos) |
+| **seaborn** | 0.13.0 | Visualização estatística avançada |
+| **LeIA-br** | 0.0.1 | Análise de sentimentos em português |
+| **emoji** | 2.10.0 | Processamento de emojis em textos |
 
 ### DevOps & Infrastructure
 
-- **Docker** & **Docker Compose**: Containerização e orquestração
-- **Nginx**: Servidor web para servir o frontend
-- **Git**: Controle de versão
+- **Docker** & **Docker Compose**: Containerização e orquestração de serviços
+- **Nginx**: Servidor web para servir aplicação Flutter
+- **Git & GitHub**: Controle de versão e colaboração
 
 ---
 
@@ -184,10 +202,7 @@ Certifique-se de ter instalado:
 
 ```bash
 # Clone o repositório
-git clone <repository-url>
-cd sentiment_analysis_project
-
-# Entre no diretório que contém o docker-compose.yml
+git clone https://github.com/LucasTheisen31/sentiment_analysis_project.git
 cd sentiment_analysis_project
 
 # Inicie todos os serviços
@@ -197,10 +212,31 @@ docker-compose up --build
 docker-compose up -d --build
 ```
 
-#### Opção 2: Executar de Qualquer Diretório
+#### Opção 2: Desenvolvimento Local
 
+**Backend (API):**
 ```bash
-docker-compose -f sentiment_analysis_project/docker-compose.yml up --build
+cd api
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python -m sentiment_analyzer.api
+```
+
+**Frontend (Flutter Web):**
+```bash
+cd sentiment_analysis_app
+flutter pub get
+flutter run -d chrome
+```
+
+**Notebooks de Desenvolvimento:**
+```bash
+cd notebooks_and_scripts
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+jupyter notebook
 ```
 
 ### 🌐 Acessar o Sistema

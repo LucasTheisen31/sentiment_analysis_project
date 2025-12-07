@@ -1,37 +1,30 @@
-appdirs
-black
-certifi
-chardet
-click
-fastapi>=0.95
-filelock
-flake8
-gdown
-h11
-idna
-isort
-joblib
-mccabe
-mypy-extensions
-numpy>=1.23
-packaging
-pathspec
-pycodestyle
-pydantic>=1.10
-pyflakes
-pyparsing
-PySocks
-regex
-requests
-sacremoses
-six
-starlette
-tokenizers
-toml
-torch>=2.0
-tqdm
-transformers>=4.30
-typed-ast
-typing-extensions
-urllib3
-uvicorn
+# ==============================================================================
+# Requirements para API de Produção
+# Projeto: Análise de Sentimentos com BERTimbau
+# Autor: Lucas Evandro Theisen
+# Instituição: UTFPR - Campus Santa Helena
+# Ano: 2025
+# ==============================================================================
+
+# Framework Web
+fastapi==0.95.0
+uvicorn[standard]==0.20.0
+pydantic==1.10.13
+
+# Machine Learning - VERSÕES FIXAS COMPATÍVEIS COM O MODELO TREINADO
+torch==2.1.2+cpu
+torchvision==0.16.2+cpu
+torchaudio==2.1.2+cpu
+transformers==4.36.2
+
+# Processamento de Dados
+numpy==1.26.4
+pandas==2.1.4
+
+# Utilitários
+tqdm==4.66.1
+requests==2.32.5
+
+# Opcional - Ferramentas de Desenvolvimento
+black==23.12.1
+flake8==7.0.0

@@ -1,24 +1,40 @@
-# Comment Analysis App
+# Comment Analysis App - Flutter Web
 
-Aplicação Flutter Web para análise de sentimentos de avaliações e comentários.
+Aplicação Flutter Web para análise de sentimentos de avaliações e comentários em tempo real, utilizando Deep Learning com modelo BERTimbau.
+
+**Autor:** Lucas Evandro Theisen  
+**Instituição:** UTFPR - Campus Santa Helena  
+**Curso:** Ciência da Computação  
+**Ano:** 2025
 
 <!-- Forçar fundo branco nos diagramas Mermaid em diferentes renderizadores -->
 <style>
 .mermaid, .mermaid svg { background-color: #ffffff !important; }
 </style>
 
-## Visão Geral
+---
 
-Esta aplicação permite que usuários escrevam avaliações e obtenham análises de sentimento em tempo real, utilizando um modelo de IA hospedado em uma API backend. A arquitetura segue o padrão MVC com gerenciamento de estado reativo usando MobX.
+## 📋 Visão Geral
 
-### Funcionalidades
+Esta aplicação permite que usuários escrevam avaliações e obtenham análises de sentimento em tempo real, utilizando um modelo de IA baseado em BERT hospedado em uma API backend. A arquitetura segue o padrão MVC com gerenciamento de estado reativo usando MobX.
 
-- ✍️ Digitação de avaliações com análise em tempo real (debouncing de 700ms)
-- 🎯 Classificação de sentimento em 5 níveis (extremamente negativo → extremamente positivo)
-- 📊 Visualização de probabilidades para cada classe de sentimento
-- ⭐ Representação visual com estrelas e emojis
-- 💾 Histórico local de avaliações salvas
-- 🔄 Atualizações reativas da interface
+### ✨ Funcionalidades
+
+- ✍️ **Análise em Tempo Real**: Digitação de avaliações com análise automática (debouncing de 700ms)
+- 🎯 **Classificação Precisa**: 5 níveis de sentimento (extremamente negativo → extremamente positivo)
+- 📊 **Visualização Detalhada**: Probabilidades para cada classe de sentimento
+- ⭐ **Feedback Visual**: Representação com estrelas e emojis animados
+- 💾 **Histórico Local**: Armazenamento de avaliações analisadas
+- 🔄 **Interface Reativa**: Atualizações instantâneas usando MobX
+- 📱 **Responsivo**: Funciona em diferentes tamanhos de tela
+
+### 🎯 Modelo de Deep Learning
+
+- **Modelo**: BERTimbau Base (neuralmind/bert-base-portuguese-cased)
+- **Arquitetura**: BERT (768) + Dropout (0.3) + Linear (768 → 5 classes)
+- **Dataset**: 3000 avaliações balanceadas
+- **Acurácia**: >85% no conjunto de teste
+- **Classes**: 5 níveis de sentimento
 
 ---
 
@@ -161,27 +177,36 @@ abstract class SentimentRepository {
 
 ---
 
-## Tecnologias e Dependências
+---
+
+## 🛠️ Tecnologias e Dependências
 
 ### Principais Packages
 
-- **`mobx`** + **`flutter_mobx`**: Gerenciamento de estado reativo
-- **`http`** / **`dio`**: Cliente HTTP para comunicação com API
-- **`build_runner`**: Geração de código para MobX
-- **`flutter_rating_bar`**: Widget de estrelas de avaliação
+| Package | Versão | Propósito |
+|---------|--------|-----------|
+| **mobx** + **flutter_mobx** | 2.0+ | Gerenciamento de estado reativo e observável |
+| **http** / **dio** | Latest | Cliente HTTP para comunicação com API backend |
+| **build_runner** | Latest | Geração automática de código para MobX |
+| **flutter_rating_bar** | Latest | Widget de estrelas para avaliação visual |
+| **google_fonts** | Latest | Tipografia moderna (Roboto) |
+| **animated_emoji** | Latest | Emojis animados para feedback visual |
+| **flutter_dotenv** | Latest | Gerenciamento de variáveis de ambiente |
 
-## Como Executar
+---
+
+## 🚀 Como Executar
 
 ### Pré-requisitos
 
-- Flutter SDK 3.0+
-- Dart SDK 3.0+
-- API de análise de sentimentos rodando em `http://localhost:8000`
-- Arquivo `.env` configurado na raiz do projeto
+- **Flutter SDK 3.0+** ([Download](https://docs.flutter.dev/get-started/install))
+- **Dart SDK 3.0+** (incluído com Flutter)
+- **API Backend** rodando em `http://localhost:8000`
+- **Chrome** ou navegador compatível
 
-### Passos
+### Passos para Executar
 
-1. **Criar arquivo `.env` (ou copie `.env.example` e renomeie para `.env`):**
+1. **Criar arquivo `.env` (ou copie `.env.example`):**
 ```bash
 echo "API_URL = http://localhost:8000" > .env
 ```
@@ -193,12 +218,19 @@ flutter pub get
 
 3. **Gerar código MobX:**
 ```bash
-dart run build_runner build watch -d
+# Build único
+dart run build_runner build --delete-conflicting-outputs
+
+# Modo watch (recomendado para desenvolvimento)
+dart run build_runner watch --delete-conflicting-outputs
 ```
 
 4. **Executar em modo web:**
 ```bash
 flutter run -d chrome
+
+# Com porta customizada
+flutter run -d chrome --web-port=3000
 ```
 
 5. **Build para produção:**

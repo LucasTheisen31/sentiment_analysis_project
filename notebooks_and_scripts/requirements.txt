@@ -16,16 +16,18 @@ google-generativeai==0.8.3
 
 # Análise e Visualização de Dados
 pandas==2.1.4
-numpy==1.24.3
+numpy==1.26.4
 matplotlib==3.8.2
 seaborn==0.13.0
 
 # Processamento de Texto (03_cleaning)
 emoji==2.10.0
-LeIA==0.1.0
+leia-br==0.0.1
 
 # Machine Learning e Deep Learning (05_training)
-torch==2.1.2
+torch==2.1.2+cpu
+torchvision==0.16.2+cpu
+torchaudio==2.1.2+cpu
 transformers==4.36.2
 watermark==2.4.3
 
@@ -41,3 +43,7 @@ notebook==7.0.6
 # Formatação e Qualidade de Código
 black==23.12.1
 flake8==7.0.0
+
+# Processamento de Datasets
+pillow==10.1.0
+python-pptx==0.6.23
