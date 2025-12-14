@@ -729,11 +729,13 @@ watermark==2.4.3           # Versionamento
 
 ### Documentos do Projeto
 
-- [README.txt](../README.txt) (raiz): Instruções de uso do sistema completo
-- [README.md](../README.md) (raiz): Visão geral do projeto
-- [api/README.md](../sentiment_analysis_project/api/README.md): Documentação técnica da API
-- [api/TRAINING.md](../sentiment_analysis_project/api/TRAINING.md): Explicação visual dos conceitos de treinamento
-- [LICENSE](../LICENSE): Licença do projeto
+| Documento | Descrição |
+|-----------|-----------|
+| [README.txt](../README.txt) | Instruções de uso do sistema completo |
+| [README.md](../README.md) | Visão geral do projeto |
+| [api/README.md](../sentiment_analysis_project/api/README.md) | Documentação técnica da API |
+| [api/TRAINING.md](../sentiment_analysis_project/api/TRAINING.md) | Explicação visual dos conceitos de treinamento |
+| [LICENSE](../LICENSE) | Licença do projeto |
 
 ---
 
