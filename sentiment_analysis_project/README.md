@@ -48,6 +48,13 @@ Veja o arquivo [LICENSE](../LICENSE) para o texto legal completo da licença.
 
 ---
 
+<!-- Forçar fundo branco nos diagramas Mermaid em diferentes renderizadores -->
+<style>
+.mermaid, .mermaid svg { background-color: #ffffff !important; }
+</style>
+
+---
+
 ## 📋 Visão Geral
 
 Este projeto fornece uma solução end-to-end para análise de sentimentos de textos em português, utilizando um modelo de deep learning baseado em transformers (BERTimbau).
@@ -713,12 +720,33 @@ curl -X POST http://localhost:8000/predict \
 
 ---
 
-## 🔗 Recursos Adicionais
+## 📚 Documentação Adicional
 
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Flutter Documentation](https://docs.flutter.dev/)
-- [MobX.dart](https://mobx.netlify.app/)
-- [Docker Compose Reference](https://docs.docker.com/compose/)
-- [HuggingFace Transformers](https://huggingface.co/docs/transformers/)
+### Documentos do Projeto
+
+| Documento | Descrição |
+|-----------|-----------|
+| [README.txt](../README.txt) | Instruções de uso do sistema completo |
+| [README.md](../README.md) | Visão geral do projeto |
+| [api/README.md](../sentiment_analysis_project/api/README.md) | Documentação técnica da API |
+| [api/TRAINING.md](../sentiment_analysis_project/api/TRAINING.md) | Explicação visual dos conceitos de treinamento |
+| [LICENSE](../LICENSE) | Licença do projeto |
 
 ---
+
+## 📄 Citação Acadêmica
+
+Se você utilizar este trabalho em sua pesquisa, por favor cite:
+
+```bibtex
+@mastersthesis{theisen2025sentiment,
+  title={Análise de Sentimentos em Comentários de Aplicativos Comerciais},
+  author={Theisen, Lucas Evandro},
+  year={2025},
+  school={Universidade Tecnológica Federal do Paraná},
+  type={Trabalho de Conclusão de Curso},
+  address={Santa Helena, PR, Brasil}
+}
+```
+
+**Nota:** Esta documentação faz parte do TCC "ANÁLISE DE SENTIMENTOS EM COMENTÁRIOS DE APLICATIVOS COMERCIAIS", desenvolvido na UTFPR - Campus Santa Helena em 2025.
