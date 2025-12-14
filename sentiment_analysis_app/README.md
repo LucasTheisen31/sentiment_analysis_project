@@ -371,9 +371,11 @@ void onTextChanged(String text) {
 |-----------|-----------|
 | [README.txt](../README.txt) | Instruções de uso do sistema completo |
 | [README.md](../README.md) | Visão geral do projeto |
-| [sentiment_analysis_project/README.md](../sentiment_analysis_project/README.md) | Documentação técnica do sistema |
+| [notebooks_and_scripts/README.md](../notebooks_and_scripts/README.md) | Pipeline de dados e treinamento |
+| [sentiment_analysis_project/README.md](../sentiment_analysis_project/README.md) | Documentação técnica do sistema (deploy com Docker Compose - API e frontend Flutter web) |
 | [sentiment_analysis_project/api/README.md](../sentiment_analysis_project/api/README.md) | Documentação técnica da API |
-| [sentiment_analysis_app/README.md (este arquivo)](README.md) | Documentação da aplicação Flutter |
+| [sentiment_analysis_project/web/README.md](../sentiment_analysis_project/web/README.md) | Documentação do frontend Flutter web |
+| [sentiment_analysis_app/README.md (este arquivo)](README.md) | Documentação da aplicação front-end Flutter |
 | [LICENSE](../LICENSE) | Licença do projeto |
 
 ---
