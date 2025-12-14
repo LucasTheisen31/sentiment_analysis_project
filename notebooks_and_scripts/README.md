@@ -78,8 +78,9 @@ notebooks_and_scripts/
 │   │   └── Large/             # BERTimbau Large (335M parâmetros)
 │   ├── BERT multilingual/
 │   │   └── Base/              # BERT Multilingual Base
-│   └── XLMRoberta/
-│       └── Base/              # XLM-RoBERTa Base
+│   ├── XLMRoberta/
+│   │   └── Base/              # XLM-RoBERTa Base
+│   └── Testes.ods             # Planilha com todos os resultados dos experimentos
 │
 └── requirements.txt           # Dependências do projeto
 ```
@@ -380,8 +381,10 @@ O notebook suporta múltiplas configurações experimentais:
 ├── BERT multilingual/
 │   └── Base/          # Experimentos com BERT Multilingual
 │
-└── XLMRoberta/
-    └── Base/          # Experimentos com XLM-RoBERTa
+├── XLMRoberta/
+│   └── Base/          # Experimentos com XLM-RoBERTa
+│
+└── Testes.ods         # 📊 Planilha consolidada com todos os resultados
 ```
 
 **Conteúdo de cada pasta de experimento:**
@@ -618,7 +621,7 @@ Os resultados variam conforme o dataset e configuração. Exemplos típicos:
 | Reannotado Gemini + Demojize + LeIA | 65-75% | 0.55-0.65 | **Melhor performance** |
 | BERTimbau Large (melhor config) | 70-78% | 0.60-0.68 | Mais parâmetros, mais lento |
 
-*Nota: Valores exatos disponíveis nas pastas individuais em `05_results/`*
+*Nota: Valores exatos e análise completa disponíveis em [05_results/Testes.ods](05_results/Testes.ods) e nas pastas individuais em `05_results/`*
 
 ### Insights dos Experimentos
 

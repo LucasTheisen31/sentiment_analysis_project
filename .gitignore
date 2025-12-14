@@ -41,11 +41,18 @@ sentiment_analysis_project/api/assets/*.pt
 !sentiment_analysis_project/api/assets/.gitkeep
 
 # Modelos salvos nos notebooks
-notebooks_and_scripts/**/results/
-notebooks_and_scripts/**/*_results/
-notebooks_and_scripts/**/*.bin
-notebooks_and_scripts/**/*.pth
-notebooks_and_scripts/**/*.pt
+notebooks_and_scripts/01_collection/**/*.bin
+notebooks_and_scripts/01_collection/**/*.pth
+notebooks_and_scripts/01_collection/**/*.pt
+notebooks_and_scripts/02_reannotation/**/*.bin
+notebooks_and_scripts/02_reannotation/**/*.pth
+notebooks_and_scripts/02_reannotation/**/*.pt
+notebooks_and_scripts/03_cleaning/**/*.bin
+notebooks_and_scripts/03_cleaning/**/*.pth
+notebooks_and_scripts/03_cleaning/**/*.pt
+notebooks_and_scripts/04_training/**/*.bin
+notebooks_and_scripts/04_training/**/*.pth
+notebooks_and_scripts/04_training/**/*.pt
 notebooks_and_scripts/**/*.h5
 notebooks_and_scripts/**/*.pkl
 notebooks_and_scripts/**/*.joblib
@@ -119,13 +126,16 @@ notebooks_and_scripts/**/reviews_*.csv
 !notebooks_and_scripts/**/sample_*.csv
 !notebooks_and_scripts/**/example_*.csv
 
-# Resultados de experimentos
+# Resultados de experimentos - gráficos e visualizações
 notebooks_and_scripts/**/05_results/**/*.png
 notebooks_and_scripts/**/05_results/**/*.jpg
 notebooks_and_scripts/**/05_results/**/*.pdf
 notebooks_and_scripts/**/06_results/**/*.png
 notebooks_and_scripts/**/06_results/**/*.jpg
 notebooks_and_scripts/**/06_results/**/*.pdf
+
+# EXCEÇÃO: Manter planilha de resultados consolidados
+!notebooks_and_scripts/05_results/Testes.ods
 
 # Arquivos temporários de notebooks
 notebooks_and_scripts/**/.ipynb_checkpoints/
