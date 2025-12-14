@@ -1,4 +1,4 @@
-# 🎯 Sistema de Análise de Sentimentos - TCC
+# 🎯 Análise de Sentimentos em Comentários de Aplicativos Comerciais
 
 > Plataforma completa para análise automática de sentimentos em avaliações e comentários utilizando Deep Learning e arquitetura de microsserviços.
 
