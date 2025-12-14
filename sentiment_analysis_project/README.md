@@ -730,7 +730,7 @@ curl -X POST http://localhost:8000/predict \
 | [README.md](../README.md) | Visão geral do projeto |
 | [README.md (este arquivo)](README.md) | Documentação técnica do sistema |
 | [api/README.md](api/README.md) | Documentação técnica da API |
-| [../sentiment_analysis_app/README.md](../sentiment_analysis_app/README.md) | Documentação do aplicativo Flutter |
+| [../sentiment_analysis_app/README.md](../sentiment_analysis_app/README.md) | Documentação da aplicação Flutter |
 | [LICENSE](../LICENSE) | Licença do projeto |
 
 ---

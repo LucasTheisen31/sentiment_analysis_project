@@ -665,42 +665,6 @@ docker-compose up -d api_service
 
 ---
 
-## 🔧 Troubleshooting
-
-### Problema: Modelo não carrega
-
-**Erro:**
-
-```
-FileNotFoundError: [Errno 2] No such file or directory: 'assets/best_model_state.bin'
-```
-
-**Solução:**
-
-- Verifique se o arquivo `best_model_state.bin` existe em `api/assets/`
-- Certifique-se de estar executando o servidor do diretório correto
-
-### Problema: Erro de memória (CUDA out of memory)
-
-**Solução:**
-
-```python
-# Reduzir batch size ou usar CPU
-device = torch.device("cpu")  # Forçar CPU
-```
-
-### Problema: CORS bloqueando requisições
-
-**Solução:**
-Adicione sua origem em `api.py`:
-
-```python
-origins = [
-    "http://localhost:8080",
-    "https://seu-dominio.com",
-]
-```
-
 ## 📚 Documentação Adicional
 
 ### Documentos do Projeto
@@ -711,7 +675,7 @@ origins = [
 | [README.md](../../../README.md) | Visão geral do projeto |
 | [sentiment_analysis_project/README.md](../README.md) | Documentação técnica do sistema |
 | [api/README.md (este arquivo)](README.md) | Documentação técnica da API |
-| [sentiment_analysis_app/README.md](../../sentiment_analysis_app/README.md) | Documentação do aplicativo Flutter |
+| [sentiment_analysis_app/README.md](../../sentiment_analysis_app/README.md) | Documentação da aplicação Flutter |
 | [LICENSE](../../../LICENSE) | Licença do projeto |
 
 ---

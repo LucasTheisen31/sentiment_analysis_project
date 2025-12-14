@@ -736,7 +736,7 @@ watermark==2.4.3           # Versionamento
 | [notebooks_and_scripts/README.md (este arquivo)](README.md) | Pipeline de dados e treinamento |
 | [sentiment_analysis_project/README.md](../sentiment_analysis_project/README.md) | Documentação técnica do sistema |
 | [sentiment_analysis_project/api/README.md](../sentiment_analysis_project/api/README.md) | Documentação técnica da API |
-| [sentiment_analysis_app/README.md](../sentiment_analysis_app/README.md) | Documentação do aplicativo Flutter |
+| [sentiment_analysis_app/README.md](../sentiment_analysis_app/README.md) | Documentação da aplicação Flutter |
 | [LICENSE](../LICENSE) | Licença do projeto |
 
 ---
