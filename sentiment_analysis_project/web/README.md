@@ -336,18 +336,35 @@ Edite `nginx/default.conf` para ajustar:
 
 ---
 
-## 🤝 Integração com o Projeto
+## 📚 Documentação Adicional
 
-Este frontend faz parte do **Sistema de Análise de Sentimentos**. Consulte:
+### Documentos do Projeto
 
-- [README Principal](../README.md) - Visão geral do sistema
-- [README da API](../api/README.md) - Documentação do backend
+| Documento | Descrição |
+|-----------|-----------|
+| [README.txt](../../README.txt) | Instruções de uso do sistema completo |
+| [README.md](../../README.md) | Visão geral do projeto |
+| [sentiment_analysis_project/README.md](../README.md) | Documentação técnica do sistema |
+| [sentiment_analysis_project/api/README.md](../api/README.md) | Documentação técnica da API |
+| [sentiment_analysis_project/web/README.md (este arquivo)](README.md) | Documentação do frontend web |
+| [sentiment_analysis_app/README.md](../../sentiment_analysis_app/README.md) | Documentação do aplicativo Flutter |
+| [LICENSE](../../LICENSE) | Licença do projeto |
 
 ---
 
-## 📊 Performance
+## 📄 Citação Acadêmica
 
-- **Tempo de carregamento inicial**: < 3s (conexão rápida)
-- **Tamanho do bundle**: ~2MB (incluindo CanvasKit)
-- **Responsividade**: Adaptável para desktop, tablet e mobile
-- **PWA Ready**: Suporte a service worker para funcionamento offline
+Se você utilizar este trabalho em sua pesquisa, por favor cite:
+
+```bibtex
+@mastersthesis{theisen2025sentiment,
+  title={Análise de Sentimentos em Comentários de Aplicativos Comerciais},
+  author={Theisen, Lucas Evandro},
+  year={2025},
+  school={Universidade Tecnológica Federal do Paraná},
+  type={Trabalho de Conclusão de Curso},
+  address={Santa Helena, PR, Brasil}
+}
+```
+
+**Nota:** Esta documentação faz parte do TCC "ANÁLISE DE SENTIMENTOS EM COMENTÁRIOS DE APLICATIVOS COMERCIAIS", desenvolvido na UTFPR - Campus Santa Helena em 2025.

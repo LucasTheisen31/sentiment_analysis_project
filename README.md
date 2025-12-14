@@ -483,6 +483,17 @@ Cada README contém:
 - APIs e endpoints
 - Exemplos de código
 
+### Documentos do Projeto
+
+| Documento | Descrição |
+|-----------|-----------|
+| [README.txt](README.txt) | Instruções de uso do sistema completo |
+| [README.md](README.md) | Visão geral do projeto (este arquivo) |
+| [sentiment_analysis_project/README.md](sentiment_analysis_project/README.md) | Documentação técnica do sistema |
+| [sentiment_analysis_project/api/README.md](sentiment_analysis_project/api/README.md) | Documentação técnica da API |
+| [sentiment_analysis_app/README.md](sentiment_analysis_app/README.md) | Documentação do aplicativo Flutter |
+| [LICENSE](LICENSE) | Licença do projeto |
+
 ---
 
 ## 💻 Desenvolvimento
@@ -563,5 +574,3 @@ Se você utilizar este trabalho em sua pesquisa, por favor cite:
   address={Santa Helena, PR, Brasil}
 }
 ```
-
----

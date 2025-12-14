@@ -701,68 +701,34 @@ origins = [
 ]
 ```
 
-### Problema: Servidor não responde
+## 📚 Documentação Adicional
 
-**Verificações:**
+### Documentos do Projeto
 
-```bash
-# Verificar se a porta está em uso
-netstat -an | findstr :8000  # Windows
-lsof -i :8000                 # Linux/Mac
+| Documento | Descrição |
+|-----------|-----------|
+| [README.txt](../../../README.txt) | Instruções de uso do sistema completo |
+| [README.md](../../../README.md) | Visão geral do projeto |
+| [sentiment_analysis_project/README.md](../README.md) | Documentação técnica do sistema |
+| [api/README.md (este arquivo)](README.md) | Documentação técnica da API |
+| [sentiment_analysis_app/README.md](../../sentiment_analysis_app/README.md) | Documentação do aplicativo Flutter |
+| [LICENSE](../../../LICENSE) | Licença do projeto |
 
-# Verificar logs
-docker logs container_sentiment_analysis_api
+---
+
+## 📄 Citação Acadêmica
+
+Se você utilizar este trabalho em sua pesquisa, por favor cite:
+
+```bibtex
+@mastersthesis{theisen2025sentiment,
+  title={Análise de Sentimentos em Comentários de Aplicativos Comerciais},
+  author={Theisen, Lucas Evandro},
+  year={2025},
+  school={Universidade Tecnológica Federal do Paraná},
+  type={Trabalho de Conclusão de Curso},
+  address={Santa Helena, PR, Brasil}
+}
 ```
 
----
-
-## 📊 Performance e Otimizações
-
-### Otimizações Implementadas
-
-1. **Singleton Pattern**: Modelo carregado uma única vez
-2. **Inferência sem Gradientes**: `torch.no_grad()` para economizar memória
-3. **Tokenização Eficiente**: Padding e truncamento otimizados
-4. **FastAPI Assíncrono**: Suporte a múltiplas requisições concorrentes
-
-### Benchmark (CPU: Intel i7, 16GB RAM)
-
-| Métrica | Valor |
-|---------|-------|
-| Tempo de resposta (média) | ~350ms |
-| Throughput | ~10 req/s |
-| Uso de memória | ~2GB |
-| Cold start | ~5s (carregamento do modelo) |
-
-### Otimizações Futuras
-
-- [ ] Implementar cache de predições para textos idênticos
-- [ ] Batch processing para múltiplas requisições
-- [ ] Quantização do modelo para reduzir tamanho
-- [ ] ONNX export para inferência mais rápida
-- [ ] GPU pooling para múltiplos workers
-
----
-
-## 📚 Referências
-
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Hugging Face Transformers](https://huggingface.co/docs/transformers/)
-- [BERTimbau Paper](https://arxiv.org/abs/2008.09844)
-- [PyTorch Documentation](https://pytorch.org/docs/)
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-
----
-
-<div align="center">
-
-**Desenvolvido como parte do Sistema de Análise de Sentimentos**
-
-[⬆️ Voltar ao README principal](../README.md)
-
-</div>
+**Nota:** Esta documentação faz parte do TCC "ANÁLISE DE SENTIMENTOS EM COMENTÁRIOS DE APLICATIVOS COMERCIAIS", desenvolvido na UTFPR - Campus Santa Helena em 2025.
