@@ -465,39 +465,6 @@ services:
 
 ---
 
-## 📚 Documentação Detalhada
-
-Para documentação técnica aprofundada de cada componente:
-
-| Componente | Documentação |
-|-----------|-------------|
-| **Sistema Completo** | [sentiment_analysis_project/README.md](sentiment_analysis_project/README.md) |
-| **API Backend** | [api/README.md](sentiment_analysis_project/api/README.md) |
-| **Flutter App** | [sentiment_analysis_app/README.md](sentiment_analysis_app/README.md) |
-
-Cada README contém:
-
-- Detalhes de arquitetura
-- Diagramas técnicos
-- Guias de desenvolvimento
-- APIs e endpoints
-- Exemplos de código
-
-### Documentos do Projeto
-
-| Documento | Descrição |
-|-----------|-----------|
-| [README.txt](README.txt) | Instruções de uso do sistema completo |
-| [README.md](README.md) | Visão geral do projeto (este arquivo) |
-| [notebooks_and_scripts/README.md](notebooks_and_scripts/README.md) | Pipeline de dados e treinamento |
-| [sentiment_analysis_project/README.md](sentiment_analysis_project/README.md) | Documentação técnica do sistema (deploy com Docker Compose - API e frontend Flutter web) |
-| [sentiment_analysis_project/api/README.md](sentiment_analysis_project/api/README.md) | Documentação técnica da API |
-| [sentiment_analysis_project/web/README.md](sentiment_analysis_project/web/README.md) | Documentação do frontend Flutter web |
-| [sentiment_analysis_app/README.md](sentiment_analysis_app/README.md) | Documentação da aplicação front-end Flutter |
-| [LICENSE](LICENSE) | Licença do projeto |
-
----
-
 ## 💻 Desenvolvimento
 
 ### Executar Componentes Individualmente
@@ -559,6 +526,21 @@ docker-compose ps
 # Limpar recursos do Docker
 docker system prune -a
 ```
+
+## 📚 Documentação Adicional
+
+### Documentos do Projeto
+
+| Documento | Descrição |
+|-----------|-----------|
+| [README.txt](../README.txt) | Instruções de uso do sistema completo |
+| [README.md](../README.md) | Visão geral do projeto |
+| [notebooks_and_scripts/README.md](../notebooks_and_scripts/README.md) | Pipeline de dados e treinamento |
+| [sentiment_analysis_project/README.md (este arquivo)](README.md) | Documentação técnica do sistema (deploy com Docker Compose - API e frontend Flutter web) |
+| [sentiment_analysis_project/api/README.md](api/README.md) | Documentação técnica da API |
+| [sentiment_analysis_project/web/README.md](web/README.md) | Documentação do frontend Flutter web |
+| [sentiment_analysis_app/README.md](../sentiment_analysis_app/README.md) | Documentação da aplicação front-end Flutter |
+| [LICENSE](../LICENSE) | Licença do projeto |
 
 ---
 
