@@ -2,19 +2,27 @@
   SISTEMA DE ANÁLISE DE SENTIMENTOS - TRABALHO DE CONCLUSÃO DE CURSO
 ================================================================================
 
-TÍTULO: Sistema de Análise de Sentimentos para Avaliações em Português 
-        Brasileiro Utilizando Deep Learning
+
+TÍTULO: ANÁLISE DE SENTIMENTOS EM COMENTÁRIOS DE APLICATIVOS COMERCIAIS
+
 
 AUTOR: Lucas Evandro Theisen
-ORIENTADOR: Dr. Anderson Brilhador
-COORIENTADOR: Dr. Giuvane Conti
+ORIENTADOR: Prof. Dr. Anderson Brilhador
+COORIENTADOR: Prof. Dr. Giuvane Conti
 
 INSTITUIÇÃO: Universidade Tecnológica Federal do Paraná - Campus Santa Helena
-CURSO: Ciência da Computação
+CURSO: Bacharelado em Ciência da Computação
 ANO: 2025
 
-PALAVRAS-CHAVE: Análise de Sentimentos, Deep Learning, BERT, BERTimbau, 
-                 Processamento de Linguagem Natural, FastAPI, Flutter
+Banca Examinadora:
+  - Prof. Dr. Anderson Brilhador (Orientador) - UTFPR
+  - Profa. Dra. Giani Carla Ito - UTFPR
+  - Profa. Dra. Leliane Rezende - UTFPR
+
+Data de Aprovação: 1 de dezembro de 2025
+
+PALAVRAS-CHAVE: análise de sentimentos; processamento de linguagem natural; 
+transformers; BERT; aprendizado profundo
 
 ================================================================================
   DESCRIÇÃO DO SISTEMA
@@ -277,18 +285,41 @@ SEGURANÇA:
 - Sanitização de texto
 - Rate limiting recomendado para produção
 
+
 ================================================================================
-  LICENÇA E CITAÇÃO
+  LICENÇA
 ================================================================================
 
-Este software é distribuído sob a licença MIT.
+Copyright © 2025 Lucas Evandro Theisen
 
-Para citar este trabalho:
+Este trabalho está licenciado sob a Licença Creative Commons
+Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional (CC BY-NC-SA 4.0).
 
-THEISEN, Lucas Evandro. Sistema de Análise de Sentimentos para Avaliações 
-em Português Brasileiro Utilizando Deep Learning. 2025. Trabalho de Conclusão 
-de Curso – Ciência da Computação, Universidade Tecnológica Federal do Paraná, 
-Santa Helena, 2025.
+Esta licença permite que reutilizadores distribuam, remixem, adaptem e criem a partir 
+do material em qualquer meio ou formato apenas para fins não comerciais. Se outros 
+modificarem ou adaptarem o material, eles devem licenciar o material modificado sob termos idênticos.
+
+Termos principais:
+  - BY: O crédito deve ser dado ao autor.
+  - NC: Apenas o uso não comercial do trabalho é permitido.
+    (Não comercial significa não primariamente direcionado para ou dirigido para vantagem 
+    comercial ou compensação monetária.)
+  - SA: Adaptações devem ser compartilhadas sob os mesmos termos.
+
+Veja o arquivo LICENSE para o texto legal completo da licença.
+
+================================================================================
+  CITAÇÃO
+================================================================================
+
+@mastersthesis{theisen2025sentiment,
+  title   = {Análise de Sentimentos em Comentários de Aplicativos Comerciais},
+  author  = {Theisen, Lucas Evandro},
+  year    = {2025},
+  school  = {Universidade Tecnológica Federal do Paraná},
+  type    = {Trabalho de Conclusão de Curso},
+  address = {Santa Helena, PR, Brasil}
+}
 
 ================================================================================
                             FIM DO DOCUMENTO

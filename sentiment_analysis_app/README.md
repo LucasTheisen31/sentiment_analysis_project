@@ -1,11 +1,52 @@
 # Comment Analysis App - Flutter Web
 
-Aplicação Flutter Web para análise de sentimentos de avaliações e comentários em tempo real, utilizando Deep Learning com modelo BERTimbau.
+## 👥 Autoria
 
 **Autor:** Lucas Evandro Theisen  
-**Instituição:** UTFPR - Campus Santa Helena  
-**Curso:** Ciência da Computação  
+**Orientador:** Prof. Dr. Anderson Brilhador  
+**Coorientador:** Prof. Dr. Giuvane Conti
+
+**Instituição:** Universidade Tecnológica Federal do Paraná - Campus Santa Helena  
+**Curso:** Bacharelado em Ciência da Computação  
 **Ano:** 2025
+
+### Banca Examinadora
+
+- Prof. Dr. Anderson Brilhador (Orientador) - UTFPR
+- Profa. Dra. Giani Carla Ito - UTFPR
+- Profa. Dra. Leliane Rezende - UTFPR
+
+**Data de Aprovação:** 1 de dezembro de 2025
+
+---
+
+## 📄 Licença
+
+<div align="center">
+
+![CC BY-NC-SA](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+**Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional**
+
+</div>
+
+© 2025 Lucas Evandro Theisen
+
+Esta licença permite que reutilizadores distribuam, remixem, adaptem e criem a partir do material em qualquer meio ou formato apenas para fins não comerciais. Se outros modificarem ou adaptarem o material, eles devem licenciar o material modificado sob termos idênticos.
+
+### 📋 Termos da Licença
+
+**BY:** O crédito deve ser dado a você, o criador.
+
+**NC:** Apenas o uso não comercial do seu trabalho é permitido. *Não comercial significa não primariamente direcionado para ou dirigido para vantagem comercial ou compensação monetária.*
+
+**SA:** Adaptações devem ser compartilhadas sob os mesmos termos.
+
+---
+
+Veja o arquivo [LICENSE](../LICENSE) para o texto legal completo da licença.
+
+---
 
 <!-- Forçar fundo branco nos diagramas Mermaid em diferentes renderizadores -->
 <style>
@@ -105,6 +146,7 @@ lib/
 - Usa `Observer` do MobX para reagir a mudanças no Controller
 
 **Exemplo:**
+
 ```dart
 Observer(
   builder: (_) => Text(controller.predictedSentiment)
@@ -116,12 +158,14 @@ Observer(
 **Responsabilidade:** Gerenciamento de estado observável e lógica de negócio.
 
 **Principais recursos:**
+
 - `@observable`: Campos que notificam mudanças (ex: `predictedSentiment`, `isLoading`)
 - `@action`: Métodos que modificam o estado (ex: `evaluateSentiment()`, `saveComment()`)
 - `@computed`: Valores derivados calculados automaticamente
 - **Debouncer**: Atraso de 700ms para evitar chamadas excessivas à API
 
 **Fluxo típico:**
+
 1. View dispara ação no Controller
 2. Controller valida dados
 3. Controller chama Repository
@@ -133,6 +177,7 @@ Observer(
 **Responsabilidade:** Comunicação com API e serialização de dados.
 
 **Interface (`sentiment_repository.dart`):**
+
 ```dart
 abstract class SentimentRepository {
   Future<SentimentPredictionModel> evaluateSentiment(String text);
@@ -140,6 +185,7 @@ abstract class SentimentRepository {
 ```
 
 **Implementação (`sentiment_repository_impl.dart`):**
+
 - Faz requisições HTTP POST para `/predict`
 - Deserializa JSON em modelos Dart
 - Trata erros e exceções
@@ -147,6 +193,7 @@ abstract class SentimentRepository {
 ### 4. Models (Entidades de Dados)
 
 **`SentimentPredictionModel`**: Resposta completa da API
+
 ```dart
 {
   predictedClass: int,           // 0-4
@@ -157,6 +204,7 @@ abstract class SentimentRepository {
 ```
 
 **`SentimentProbabilityModel`**: Probabilidade individual
+
 ```dart
 {
   sentiment: String,
@@ -166,6 +214,7 @@ abstract class SentimentRepository {
 ```
 
 **`ReviewModel`**: Avaliação salva localmente
+
 ```dart
 {
   text: String,
@@ -207,16 +256,19 @@ abstract class SentimentRepository {
 ### Passos para Executar
 
 1. **Criar arquivo `.env` (ou copie `.env.example`):**
+
 ```bash
 echo "API_URL = http://localhost:8000" > .env
 ```
 
 2. **Instalar dependências:**
+
 ```bash
 flutter pub get
 ```
 
 3. **Gerar código MobX:**
+
 ```bash
 # Build único
 dart run build_runner build --delete-conflicting-outputs
@@ -226,6 +278,7 @@ dart run build_runner watch --delete-conflicting-outputs
 ```
 
 4. **Executar em modo web:**
+
 ```bash
 flutter run -d chrome
 
@@ -234,11 +287,13 @@ flutter run -d chrome --web-port=3000
 ```
 
 5. **Build para produção:**
+
 ```bash
 flutter build web
 ```
 
 **⚠️ Importante:**
+
 - O arquivo `.env` já está no `.gitignore` e não será versionado
 - Use `.env.example` como referência para as variáveis necessárias
 - As variáveis são carregadas automaticamente no `main.dart` antes do app iniciar
@@ -314,10 +369,19 @@ void onTextChanged(String text) {
 - [MobX.dart Documentation](https://mobx.netlify.app/)
 - [Flutter Web Deployment](https://docs.flutter.dev/deployment/web)
 
-## 📄 Licença
+## 📄 Citação Acadêmica
 
-Este projeto está sob licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Se você utilizar este trabalho em sua pesquisa, por favor cite:
 
----
+```bibtex
+@mastersthesis{theisen2025sentiment,
+  title={Análise de Sentimentos em Comentários de Aplicativos Comerciais},
+  author={Theisen, Lucas Evandro},
+  year={2025},
+  school={Universidade Tecnológica Federal do Paraná},
+  type={Trabalho de Conclusão de Curso},
+  address={Santa Helena, PR, Brasil}
+}
+```
 
-**Desenvolvido com ❤️ para análise de sentimentos em português brasileiro**
+**Nota:** Esta documentação faz parte do TCC "ANÁLISE DE SENTIMENTOS EM COMENTÁRIOS DE APLICATIVOS COMERCIAIS", desenvolvido na UTFPR - Campus Santa Helena em 2025.

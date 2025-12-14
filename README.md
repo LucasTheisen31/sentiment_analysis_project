@@ -6,31 +6,55 @@
 [![Flutter](https://img.shields.io/badge/Flutter-3.0+-02569B.svg)](https://flutter.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.95+-009688.svg)](https://fastapi.tiangolo.com/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ---
 
 ## 👥 Autoria
 
 **Autor:** Lucas Evandro Theisen  
-**Orientador:** Dr. Anderson Brilhador  
-**Coorientador:** Dr. Giuvane Conti
+**Orientador:** Prof. Dr. Anderson Brilhador  
+**Coorientador:** Prof. Dr. Giuvane Conti
 
 **Instituição:** Universidade Tecnológica Federal do Paraná - Campus Santa Helena  
-**Curso:** Ciência da Computação  
+**Curso:** Bacharelado em Ciência da Computação  
 **Ano:** 2025
+
+### Banca Examinadora
+
+- Prof. Dr. Anderson Brilhador (Orientador) - UTFPR
+- Profa. Dra. Giani Carla Ito - UTFPR
+- Profa. Dra. Leliane Rezende - UTFPR
+
+**Data de Aprovação:** 1 de dezembro de 2025
 
 ---
 
-## 📄 Licenciamento
+## 📄 Licença
 
-Este projeto possui duplo licenciamento:
+<div align="center">
 
-- **Código Fonte:** [MIT License](LICENSE) - Uso livre do software
-- **Trabalho Acadêmico:** [Creative Commons BY 4.0](http://creativecommons.org/licenses/by/4.0/) - Compartilhamento e adaptação com atribuição
+![CC BY-NC-SA](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
-Para citação acadêmica, veja a seção [Licença](#-licença).
+**Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional**
+
+</div>
+
+© 2025 Lucas Evandro Theisen
+
+Esta licença permite que reutilizadores distribuam, remixem, adaptem e criem a partir do material em qualquer meio ou formato apenas para fins não comerciais. Se outros modificarem ou adaptarem o material, eles devem licenciar o material modificado sob termos idênticos.
+
+### 📋 Termos da Licença
+
+**BY:** O crédito deve ser dado a você, o criador.
+
+**NC:** Apenas o uso não comercial do seu trabalho é permitido. *Não comercial significa não primariamente direcionado para ou dirigido para vantagem comercial ou compensação monetária.*
+
+**SA:** Adaptações devem ser compartilhadas sob os mesmos termos.
+
+---
+
+Veja o arquivo [LICENSE](LICENSE) para o texto legal completo da licença.
 
 ---
 
@@ -38,23 +62,22 @@ Para citação acadêmica, veja a seção [Licença](#-licença).
 
 **Navegação Rápida:**
 
-🎓 [Visão Geral](#-visão-geral) • 
-🏗️ [Arquitetura do Sistema](#-arquitetura-do-sistema) • 
-🛠️ [Tecnologias Utilizadas](#-tecnologias-utilizadas) • 
-🚀 [Quick Start](#-quick-start) • 
-📁 [Estrutura do Projeto](#-estrutura-do-projeto) • 
-🧩 [Componentes do Sistema](#-componentes-do-sistema) • 
-🚀 [Deploy](#-deploy) • 
-📚 [Documentação Detalhada](#-documentação-detalhada) • 
-💻 [Desenvolvimento](#-desenvolvimento) • 
-🤝 [Contribuindo](#-contribuindo) • 
+🎓 [Visão Geral](#-visão-geral) •
+🏗️ [Arquitetura do Sistema](#️-arquitetura-do-sistema) •
+🛠️ [Tecnologias Utilizadas](#️-tecnologias-utilizadas) •
+🚀 [Quick Start](#-quick-start) •
+📁 [Estrutura do Projeto](#-estrutura-do-projeto) •
+🧩 [Componentes do Sistema](#-componentes-do-sistema) •
+🚀 [Deploy](#-deploy) •
+📚 [Documentação Detalhada](#-documentação-detalhada) •
+💻 [Desenvolvimento](#-desenvolvimento) •
 📄 [Licença](#-licença)
 
 ---
 
 ## 🎓 Visão Geral
 
-Este é um **Trabalho de Conclusão de Curso (TCC)** que apresenta uma solução completa para análise de sentimentos em textos em português. O sistema utiliza um modelo de **Deep Learning baseado em BERT** (BERTimbau) para classificar avaliações em 5 níveis de sentimento, desde extremamente negativo até extremamente positivo.
+Este é um **Trabalho de Conclusão de Curso (TCC)** intitulado "Análise de Sentimentos em Comentários de Aplicativos Comerciais" que apresenta uma solução completa para análise de sentimentos em textos em português. O sistema utiliza um modelo de **Deep Learning baseado em BERT** (BERTimbau) para classificar avaliações em 5 níveis de sentimento, desde extremamente negativo até extremamente positivo.
 
 ### 🎯 Objetivos do Projeto
 
@@ -147,6 +170,7 @@ flowchart TB
 | **Pydantic** | Latest | Validação de dados e serialização |
 
 **Modelo de ML:**
+
 - **BERTimbau Base** (`neuralmind/bert-base-portuguese-cased`): Modelo BERT pré-treinado em português brasileiro
 - **Arquitetura**: BERT (768) + Dropout (0.3) + Linear (768 → 5 classes)
 - **Otimizador**: AdamW (lr=3e-5, weight_decay=0.01)
@@ -215,6 +239,7 @@ docker-compose up -d --build
 #### Opção 2: Desenvolvimento Local
 
 **Backend (API):**
+
 ```bash
 cd api
 python -m venv .venv
@@ -224,6 +249,7 @@ python -m sentiment_analyzer.api
 ```
 
 **Frontend (Flutter Web):**
+
 ```bash
 cd sentiment_analysis_app
 flutter pub get
@@ -231,6 +257,7 @@ flutter run -d chrome
 ```
 
 **Notebooks de Desenvolvimento:**
+
 ```bash
 cd notebooks_and_scripts
 python -m venv .venv
@@ -262,6 +289,7 @@ Invoke-RestMethod -Uri "http://localhost:8000/predict" -Method POST -Body $body 
 ```
 
 **Resposta esperada:**
+
 ```json
 {
   "predicted_class": 4,
@@ -376,6 +404,7 @@ Backend desenvolvido em **Python** com **FastAPI**, responsável por:
 - Retornar predições com probabilidades
 
 **Principais características:**
+
 - ✅ Validação automática com Pydantic
 - ✅ Documentação automática (Swagger/ReDoc)
 - ✅ CORS habilitado para requisições cross-origin
@@ -397,6 +426,7 @@ Frontend desenvolvido em **Flutter Web**, responsável por:
 - Debouncing de requisições (700ms)
 
 **Arquitetura:**
+
 - 🏗️ Padrão MVC
 - 📦 Gerenciamento de estado: MobX
 - 🔄 Observables reativos
@@ -428,6 +458,7 @@ services:
 ```
 
 **Características:**
+
 - ✅ Builds isolados e reproduzíveis
 - ✅ Rede interna para comunicação entre serviços
 - ✅ Healthchecks para garantir disponibilidade
@@ -446,6 +477,7 @@ Para documentação técnica aprofundada de cada componente:
 | **Flutter App** | [sentiment_analysis_app/README.md](sentiment_analysis_app/README.md) |
 
 Cada README contém:
+
 - Detalhes de arquitetura
 - Diagramas técnicos
 - Guias de desenvolvimento
@@ -518,37 +550,19 @@ docker system prune -a
 
 ---
 
-## 🤝 Contribuindo
+## 📄 Citação Acadêmica
 
-Este é um projeto acadêmico (TCC), mas contribuições são bem-vindas!
+Se você utilizar este trabalho em sua pesquisa, por favor cite:
 
-### Como Contribuir
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
-5. Abra um Pull Request
-
-### Guidelines
-
-- Siga as convenções de código existentes
-- Adicione testes para novas funcionalidades
-- Atualize a documentação conforme necessário
-- Certifique-se de que os testes passam antes de submeter PR
+```bibtex
+@mastersthesis{theisen2025sentiment,
+  title={Análise de Sentimentos em Comentários de Aplicativos Comerciais},
+  author={Theisen, Lucas Evandro},
+  year={2025},
+  school={Universidade Tecnológica Federal do Paraná},
+  type={Trabalho de Conclusão de Curso},
+  address={Santa Helena, PR, Brasil}
+}
+```
 
 ---
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-<div align="center">
-
-**Desenvolvido com ❤️ como parte do TCC**
-
-⭐ Se este projeto foi útil para você, considere dar uma estrela!
-
-</div>

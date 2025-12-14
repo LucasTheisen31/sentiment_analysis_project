@@ -1,62 +1,109 @@
-MIT License
+═══════════════════════════════════════════════════════════════════════════════
+    LICENÇA CREATIVE COMMONS ATRIBUIÇÃO-NÃOCOMERCIAL-COMPARTIHAIGUAL 4.0
+                            INTERNACIONAL (CC BY-NC-SA 4.0)
+═══════════════════════════════════════════════════════════════════════════════
 
 Copyright (c) 2025 Lucas Evandro Theisen
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-================================================================================
-
-CREATIVE COMMONS - ATRIBUIÇÃO 4.0 INTERNACIONAL (CC BY 4.0)
-
-Este trabalho acadêmico está licenciado sob a Licença Creative Commons 
-Atribuição 4.0 Internacional.
-
-Você tem o direito de:
-- Compartilhar: copiar e redistribuir o material em qualquer meio ou formato
-- Adaptar: remixar, transformar e criar a partir do material para qualquer fim
-
-Sob as seguintes condições:
-- Atribuição: Você deve dar o crédito apropriado, prover um link para a 
-  licença e indicar se mudanças foram feitas.
+Este trabalho está licenciado sob a Licença Creative Commons
+Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional.
 
 Para ver uma cópia desta licença, visite:
-http://creativecommons.org/licenses/by/4.0/
+<https://creativecommons.org/licenses/by-nc-sa/4.0/>
 
-================================================================================
+Ou envie uma carta para:
+Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-CITAÇÃO ACADÊMICA:
+───────────────────────────────────────────────────────────────────────────────
+                           VOCÊ É LIVRE PARA:
+───────────────────────────────────────────────────────────────────────────────
 
-THEISEN, Lucas Evandro. Sistema de Análise de Sentimentos para Avaliações 
-em Português Brasileiro Utilizando Deep Learning. 2025. Trabalho de Conclusão 
-de Curso – Ciência da Computação, Universidade Tecnológica Federal do Paraná, 
-Santa Helena, 2025.
+  ✓ COMPARTILHAR — copiar e redistribuir o material em qualquer meio ou formato
 
-================================================================================
+  ✓ ADAPTAR — remixar, transformar, e criar a partir do material
 
-AUTORIA:
+───────────────────────────────────────────────────────────────────────────────
+                      SOB OS SEGUINTES TERMOS:
+───────────────────────────────────────────────────────────────────────────────
 
-Autor: Lucas Evandro Theisen
-Orientador: Dr. Anderson Brilhador
-Coorientador: Dr. Giuvane Conti
+  ⚫ ATRIBUIÇÃO (BY) — Você deve dar o crédito apropriado, prover um link para
+    a licença e indicar se mudanças foram feitas. Você pode fazê-lo de qualquer
+    forma razoável, mas não de maneira que sugira que o licenciante apoia você
+    ou o seu uso.
 
-Instituição: Universidade Tecnológica Federal do Paraná - Campus Santa Helena
-Curso: Ciência da Computação
-Ano: 2025
+  ⚫ NÃOCOMERCIAL (NC) — Você não pode usar o material para fins comerciais.
+    Uso comercial é qualquer uso primariamente intencionado ou direcionado
+    à obtenção de vantagem comercial ou compensação monetária privada.
 
-================================================================================
+  ⚫ COMPARTIHAIGUAL (SA) — Se você remixar, transformar, ou criar a partir
+    do material, tem de distribuir as suas contribuições sob a mesma licença
+    que o original (CC BY-NC-SA 4.0).
+
+  • SEM RESTRIÇÕES ADICIONAIS — Você não pode aplicar termos jurídicos ou
+    medidas de caráter tecnológico que restrinjam legalmente outros de fazerem
+    algo que a licença permita.
+
+───────────────────────────────────────────────────────────────────────────────
+                              AVISOS IMPORTANTES:
+───────────────────────────────────────────────────────────────────────────────
+
+  • Você não tem de cumprir com os termos da licença relativamente a elementos
+    do material que estejam no domínio público ou cuja utilização seja permitida
+    por uma exceção ou limitação que seja aplicável.
+
+  • Não são dadas quaisquer garantias. A licença pode não lhe dar todas as
+    autorizações necessárias para o uso pretendido. Por exemplo, outros direitos,
+    tais como direitos de imagem, de privacidade ou direitos morais, podem
+    limitar o uso do material.
+
+───────────────────────────────────────────────────────────────────────────────
+                        INFORMAÇÕES ADICIONAIS:
+───────────────────────────────────────────────────────────────────────────────
+
+Este produto tecnológico foi desenvolvido como parte do Trabalho de Conclusão
+de Curso (TCC) do Bacharelado em Ciência da Computação da Universidade
+Tecnológica Federal do Paraná (UTFPR) - Campus Santa Helena.
+
+AUTOR: Lucas Evandro Theisen
+       E-mail: <lucasevandro11@hotmail.com>
+
+ORIENTADOR: Prof. Dr. Anderson Brilhador
+COORIENTADOR: Prof. Dr. Giuvane Conti
+
+BANCA EXAMINADORA:
+  • Prof. Dr. Anderson Brilhador (Orientador) - UTFPR
+  • Profa. Dra. Giani Carla Ito - UTFPR
+  • Profa. Dra. Leliane Rezende - UTFPR
+
+INSTITUIÇÃO: Universidade Tecnológica Federal do Paraná
+             Campus Santa Helena
+             Curso de Bacharelado em Ciência da Computação
+
+ANO: 2025
+
+REPOSITÓRIO: <https://github.com/LucasTheisen31/sentiment_analysis_project>
+
+───────────────────────────────────────────────────────────────────────────────
+                        CITAÇÃO ACADÊMICA SUGERIDA:
+───────────────────────────────────────────────────────────────────────────────
+
+THEISEN, Lucas Evandro. Análise de Sentimentos em Comentários de Aplicativos
+Comerciais. 2025. Trabalho de Conclusão de Curso (Bacharelado em Ciência da
+Computação) – Universidade Tecnológica Federal do Paraná, Santa Helena, 2025.
+
+═══════════════════════════════════════════════════════════════════════════════
+                         TEXTO LEGAL COMPLETO
+═══════════════════════════════════════════════════════════════════════════════
+
+Para consultar o texto legal completo da licença CC BY-NC-SA 4.0 Internacional:
+
+  • Versão resumida (Commons Deed):
+    <https://creativecommons.org/licenses/by-nc-sa/4.0/>
+
+  • Texto legal completo (Legal Code):
+    <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.pt>
+
+  • Versão em inglês (oficial):
+    <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>
+
+═══════════════════════════════════════════════════════════════════════════════

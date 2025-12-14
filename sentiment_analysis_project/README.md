@@ -1,11 +1,52 @@
 # Sistema de Análise de Sentimentos
 
-Sistema completo de análise de sentimentos com backend Python/FastAPI e frontend Flutter Web, containerizado com Docker.
+## 👥 Autoria
 
-<!-- Forçar fundo branco nos diagramas Mermaid em diferentes renderizadores -->
-<style>
-.mermaid, .mermaid svg { background-color: #ffffff !important; }
-</style>
+**Autor:** Lucas Evandro Theisen  
+**Orientador:** Prof. Dr. Anderson Brilhador  
+**Coorientador:** Prof. Dr. Giuvane Conti
+
+**Instituição:** Universidade Tecnológica Federal do Paraná - Campus Santa Helena  
+**Curso:** Bacharelado em Ciência da Computação  
+**Ano:** 2025
+
+### Banca Examinadora
+
+- Prof. Dr. Anderson Brilhador (Orientador) - UTFPR
+- Profa. Dra. Giani Carla Ito - UTFPR
+- Profa. Dra. Leliane Rezende - UTFPR
+
+**Data de Aprovação:** 1 de dezembro de 2025
+
+---
+
+## 📄 Licença
+
+<div align="center">
+
+![CC BY-NC-SA](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+**Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional**
+
+</div>
+
+© 2025 Lucas Evandro Theisen
+
+Esta licença permite que reutilizadores distribuam, remixem, adaptem e criem a partir do material em qualquer meio ou formato apenas para fins não comerciais. Se outros modificarem ou adaptarem o material, eles devem licenciar o material modificado sob termos idênticos.
+
+### 📋 Termos da Licença
+
+**BY:** O crédito deve ser dado a você, o criador.
+
+**NC:** Apenas o uso não comercial do seu trabalho é permitido. *Não comercial significa não primariamente direcionado para ou dirigido para vantagem comercial ou compensação monetária.*
+
+**SA:** Adaptações devem ser compartilhadas sob os mesmos termos.
+
+---
+
+Veja o arquivo [LICENSE](../LICENSE) para o texto legal completo da licença.
+
+---
 
 ## 📋 Visão Geral
 
@@ -56,6 +97,7 @@ docker-compose up --build
 ```
 
 **Ou execute de qualquer lugar especificando o caminho:**
+
 ```bash
 docker-compose -f sentiment_analysis_project/docker-compose.yml up --build
 ```
@@ -201,21 +243,25 @@ flowchart LR
 ### Pipeline de Inferência
 
 **1. Recebimento da Requisição**
+
 - Endpoint: `POST /predict`
 - Validação automática via Pydantic schemas
 
 **2. Tokenização**
+
 - AutoTokenizer do modelo BERTimbau
 - Padding e attention masks automáticos
 - Max length configurável
 
 **3. Forward Pass**
+
 - Modelo em modo `eval()` (dropout desativado)
 - Extração do output `[CLS]`
 - Camada linear para logits
 - Softmax para probabilidades
 
 **4. Resposta Estruturada**
+
 - Classe predita (0-4)
 - Label de sentimento (string)
 - Confiança (0.0-1.0)
@@ -345,24 +391,28 @@ sequenceDiagram
 ### Camadas da Aplicação
 
 #### **View (Widgets)**
+
 - Interface do usuário Flutter
 - Observa mudanças no Controller via `Observer`
 - Widgets reativos que se reconstroem automaticamente
 - Componentes visuais: estrelas, emojis, gráficos de probabilidade
 
 #### **Controller (MobX Store)**
+
 - Gerencia estado observável (`@observable`)
 - Define ações (`@action`) que modificam o estado
 - Aplica debouncing de 700ms para otimizar requisições
 - Validação de entrada (≥3 caracteres)
 
 #### **Model (Repository Pattern)**
+
 - Interface abstrata define contrato
 - Implementação concreta faz requisições HTTP
 - Serialização/deserialização JSON ↔ Dart
 - Tratamento de erros e exceções
 
 #### **Models (Entidades)**
+
 - `SentimentPredictionModel`: Resposta completa da API
 - `SentimentProbabilityModel`: Probabilidade individual por classe
 - `ReviewModel`: Avaliação salva localmente com timestamp
@@ -370,6 +420,7 @@ sequenceDiagram
 ### Fluxo de Dados
 
 **Análise em Tempo Real:**
+
 ```
 Digitação → Debouncer (700ms) → Validação → Repository 
 → POST /predict → JSON Response → Modelo Dart 
@@ -377,6 +428,7 @@ Digitação → Debouncer (700ms) → Validação → Repository
 ```
 
 **Salvamento de Avaliação:**
+
 ```
 Click "Salvar" → Action MobX → ReviewModel criado 
 → Adicionado a ObservableList → UI atualiza histórico
@@ -414,6 +466,7 @@ Click "Salvar" → Action MobX → ReviewModel criado
 ### Variáveis de Ambiente
 
 **Backend (config.json):**
+
 ```json
 {
   "MODEL_ID": "neuralmind/bert-base-portuguese-cased",
@@ -424,6 +477,7 @@ Click "Salvar" → Action MobX → ReviewModel criado
 ```
 
 **Frontend (.env):**
+
 ```env
 API_URL = http://localhost:8000
 ```
@@ -431,6 +485,7 @@ API_URL = http://localhost:8000
 ### Comandos Úteis
 
 **Backend:**
+
 ```bash
 # Desenvolvimento local
 cd api
@@ -442,6 +497,7 @@ docker build -t sentiment-api ./api
 ```
 
 **Frontend:**
+
 ```bash
 # Desenvolvimento local
 cd comment_analysis_app
@@ -460,6 +516,7 @@ flutter build web --release
 ```
 
 **Docker Compose (Completo):**
+
 ```bash
 # Iniciar serviços
 docker-compose up -d
@@ -502,6 +559,7 @@ docker-compose logs -f web_service
 ```
 
 **Ou faça tudo de uma vez:**
+
 ```bash
 # Script completo para atualizar o frontend
 cd comment_analysis_app && \
@@ -512,6 +570,7 @@ docker-compose up -d --build web_service
 ```
 
 **⚠️ Importante:**
+
 - Sempre execute `flutter build web --release` antes de copiar para o Docker
 - Certifique-se de que o arquivo `.env` está configurado no `comment_analysis_app/`
 - O Nginx serve os arquivos estáticos da pasta `web/`
@@ -557,6 +616,7 @@ curl -X POST http://localhost:8000/predict \
 ```
 
 **Estrutura completa do diretório da API:**
+
 ```
 api/
 ├── assets/
@@ -573,6 +633,7 @@ api/
 ```
 
 **⚠️ Importante:**
+
 - O arquivo `.bin` pode ser grande (centenas de MB) - não versione no Git
 - Certifique-se de que o `PRE_TRAINED_MODEL` no `config.json` aponta para o arquivo correto
 - O modelo é carregado na inicialização do container (pode demorar alguns segundos)
@@ -583,18 +644,21 @@ api/
 ## 📊 Otimizações e Performance
 
 ### Backend
+
 - ✅ **Singleton Pattern**: Modelo carregado uma única vez na inicialização
 - ✅ **Modo Eval**: Dropout desativado durante inferência
 - ✅ **Batch Processing**: Suporte para múltiplas inferências simultâneas
 - ✅ **CORS Configurável**: Segurança em produção
 
 ### Frontend
+
 - ✅ **Debouncing**: Reduz requisições em ~90% durante digitação
 - ✅ **Lazy Loading**: Componentes carregados sob demanda
 - ✅ **State Management**: MobX elimina setState() manual
 - ✅ **Validação Client-side**: Evita requisições desnecessárias
 
 ### Infraestrutura
+
 - ✅ **Docker Multi-stage Builds**: Imagens otimizadas
 - ✅ **Nginx Caching**: Assets estáticos com cache
 - ✅ **Health Checks**: Monitoramento de containers
@@ -624,12 +688,14 @@ curl -X POST http://localhost:8000/predict \
 ## 📝 Notas Técnicas
 
 ### Backend
+
 - O modelo é carregado uma única vez (singleton) via `get_model()` e reutilizado entre requisições
 - O `start_server.sh` baixa os pesos automaticamente se ausentes, usando o `MODEL_ID`
 - Em produção, restrinja CORS a domínios confiáveis
 - Suporte para GPU automático se disponível (PyTorch CUDA)
 
 ### Frontend
+
 - Utiliza **flutter_dotenv** para gerenciamento seguro de variáveis de ambiente
 - Classe `Env` singleton carrega o arquivo `.env` antes da inicialização do app
 - Debouncing de 700ms para evitar chamadas excessivas à API durante a digitação
@@ -639,6 +705,7 @@ curl -X POST http://localhost:8000/predict \
 - **Importante**: Nunca versione o arquivo `.env` - adicione ao `.gitignore`
 
 ### Deploy
+
 - **API:** `http://localhost:8000` | Docs: `http://localhost:8000/docs`
 - **Web App:** `http://localhost:8080`
 - Para iniciar o sistema completo: `docker-compose up --build`
@@ -655,11 +722,3 @@ curl -X POST http://localhost:8000/predict \
 - [HuggingFace Transformers](https://huggingface.co/docs/transformers/)
 
 ---
-
-## 📄 Licença
-
-Este projeto está sob licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
----
-
-**Desenvolvido com ❤️ para análise de sentimentos em português brasileiro**

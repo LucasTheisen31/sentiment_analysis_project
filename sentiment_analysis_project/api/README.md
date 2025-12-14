@@ -1,14 +1,54 @@
 # 🐍 Sentiment Analysis API
 
-API REST desenvolvida em FastAPI para análise de sentimentos utilizando modelo BERT (BERTimbau) fine-tuned para português brasileiro.
-
----
-
 ## 👥 Autoria
 
 **Autor:** Lucas Evandro Theisen  
-**Orientador:** Dr. Anderson Brilhador  
-**Coorientador:** Dr. Giuvane Conti
+**Orientador:** Prof. Dr. Anderson Brilhador  
+**Coorientador:** Prof. Dr. Giuvane Conti
+
+**Instituição:** Universidade Tecnológica Federal do Paraná - Campus Santa Helena  
+**Curso:** Bacharelado em Ciência da Computação  
+**Ano:** 2025
+
+### Banca Examinadora
+
+- Prof. Dr. Anderson Brilhador (Orientador) - UTFPR
+- Profa. Dra. Giani Carla Ito - UTFPR
+- Profa. Dra. Leliane Rezende - UTFPR
+
+**Data de Aprovação:** 1 de dezembro de 2025
+
+---
+
+## 📄 Licença
+
+<div align="center">
+
+![CC BY-NC-SA](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+**Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional**
+
+</div>
+
+© 2025 Lucas Evandro Theisen
+
+Esta licença permite que reutilizadores distribuam, remixem, adaptem e criem a partir do material em qualquer meio ou formato apenas para fins não comerciais. Se outros modificarem ou adaptarem o material, eles devem licenciar o material modificado sob termos idênticos.
+
+### 📋 Termos da Licença
+
+**BY:** O crédito deve ser dado a você, o criador.
+
+**NC:** Apenas o uso não comercial do seu trabalho é permitido. *Não comercial significa não primariamente direcionado para ou dirigido para vantagem comercial ou compensação monetária.*
+
+**SA:** Adaptações devem ser compartilhadas sob os mesmos termos.
+
+---
+
+Veja o arquivo [LICENSE](../../LICENSE) para o texto legal completo da licença.
+
+---
+
+API REST desenvolvida em FastAPI para análise de sentimentos utilizando modelo BERT (BERTimbau) fine-tuned para português brasileiro.
 
 ---
 
@@ -76,10 +116,10 @@ sequenceDiagram
     A-->>C: 7. 200 OK { predicted_class, predicted_sentiment,<br/>confidence, probabilities }
 ```
 
-
 ### Componentes do Modelo
 
 #### 1. **BERTimbau** (`neuralmind/bert-base-portuguese-cased`)
+
 - Modelo BERT pré-treinado especificamente para português brasileiro
 - 12 camadas de transformer
 - Hidden size: 768
@@ -169,8 +209,8 @@ uvicorn sentiment_analyzer.api:app --host 0.0.0.0 --port 8000 --workers 4
 
 Após iniciar o servidor, acesse:
 
-- **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
+- **Swagger UI**: <http://localhost:8000/docs>
+- **ReDoc**: <http://localhost:8000/redoc>
 
 ---
 
@@ -183,11 +223,13 @@ Classifica o sentimento de um texto.
 #### Request
 
 **Headers:**
+
 ```
 Content-Type: application/json
 ```
 
 **Body (JSON):**
+
 ```json
 {
   "text": "Este produto é excelente! Recomendo muito!"
@@ -195,6 +237,7 @@ Content-Type: application/json
 ```
 
 **Schema (Pydantic):**
+
 ```python
 class PredictionRequestModel(BaseModel):
     text: str  # Texto para análise (mínimo 1 caractere)
@@ -205,6 +248,7 @@ class PredictionRequestModel(BaseModel):
 **Status Code:** `200 OK`
 
 **Body (JSON):**
+
 ```json
 {
   "predicted_class": 4,
@@ -241,6 +285,7 @@ class PredictionRequestModel(BaseModel):
 ```
 
 **Schema (Pydantic):**
+
 ```python
 class ClassProbabilityModel(BaseModel):
     sentiment: str          # Nome do sentimento
@@ -327,6 +372,7 @@ console.log('Confiança:', result.confidence);
 | `500` | Erro interno do servidor |
 
 **Exemplo de Erro (422):**
+
 ```json
 {
   "detail": [
@@ -382,6 +428,7 @@ api/
 ```
 
 **Características do Modelo:**
+
 - Formato: PyTorch state_dict (`.bin`)
 - Tamanho: ~420 MB
 - Treinado em: Dataset de reviews em português
@@ -423,25 +470,33 @@ api/
 ### Descrição dos Arquivos
 
 #### `api.py`
+
 Arquivo principal que define a aplicação FastAPI:
+
 - Configuração de CORS
 - Definição do endpoint `/predict`
 - Injeção de dependência do modelo
 
 #### `classifier/model.py`
+
 Classe `Model` responsável por:
+
 - Carregar o tokenizer BERTimbau
 - Carregar o modelo treinado
 - Realizar inferência (método `predict`)
 - Singleton pattern para otimização
 
 #### `classifier/sentiment_classifier.py`
+
 Classe `SentimentClassifier` (PyTorch `nn.Module`):
+
 - Define a arquitetura: BERT + Dropout + Linear
 - Método `forward` para propagação
 
 #### `models/*.py`
+
 Schemas Pydantic para validação:
+
 - `PredictionRequestModel`: Validação de entrada
 - `PredictionResponseModel`: Estrutura de resposta
 - `ClassProbabilityModel`: Probabilidade individual
@@ -615,17 +670,20 @@ docker-compose up -d api_service
 ### Problema: Modelo não carrega
 
 **Erro:**
+
 ```
 FileNotFoundError: [Errno 2] No such file or directory: 'assets/best_model_state.bin'
 ```
 
 **Solução:**
+
 - Verifique se o arquivo `best_model_state.bin` existe em `api/assets/`
 - Certifique-se de estar executando o servidor do diretório correto
 
 ### Problema: Erro de memória (CUDA out of memory)
 
 **Solução:**
+
 ```python
 # Reduzir batch size ou usar CPU
 device = torch.device("cpu")  # Forçar CPU
@@ -635,6 +693,7 @@ device = torch.device("cpu")  # Forçar CPU
 
 **Solução:**
 Adicione sua origem em `api.py`:
+
 ```python
 origins = [
     "http://localhost:8080",
@@ -645,6 +704,7 @@ origins = [
 ### Problema: Servidor não responde
 
 **Verificações:**
+
 ```bash
 # Verificar se a porta está em uso
 netstat -an | findstr :8000  # Windows

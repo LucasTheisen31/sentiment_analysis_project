@@ -1,5 +1,55 @@
 # 💻 Sentiment Analysis Web Frontend
 
+## 👥 Autoria
+
+**Autor:** Lucas Evandro Theisen  
+**Orientador:** Prof. Dr. Anderson Brilhador  
+**Coorientador:** Prof. Dr. Giuvane Conti
+
+**Instituição:** Universidade Tecnológica Federal do Paraná - Campus Santa Helena  
+**Curso:** Bacharelado em Ciência da Computação  
+**Ano:** 2025
+
+### Banca Examinadora
+
+- Prof. Dr. Anderson Brilhador (Orientador) - UTFPR
+- Profa. Dra. Giani Carla Ito - UTFPR
+- Profa. Dra. Leliane Rezende - UTFPR
+
+**Data de Aprovação:** 1 de dezembro de 2025
+
+---
+
+## 📄 Licença
+
+<div align="center">
+
+![CC BY-NC-SA](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+**Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional**
+
+</div>
+
+© 2025 Lucas Evandro Theisen
+
+Esta licença permite que reutilizadores distribuam, remixem, adaptem e criem a partir do material em qualquer meio ou formato apenas para fins não comerciais. Se outros modificarem ou adaptarem o material, eles devem licenciar o material modificado sob termos idênticos.
+
+### 📋 Termos da Licença
+
+**BY:** O crédito deve ser dado a você, o criador.
+
+**NC:** Apenas o uso não comercial do seu trabalho é permitido. *Não comercial significa não primariamente direcionado para ou dirigido para vantagem comercial ou compensação monetária.*
+
+**SA:** Adaptações devem ser compartilhadas sob os mesmos termos.
+
+---
+
+Veja o arquivo [LICENSE](../../LICENSE) para o texto legal completo da licença.
+
+---
+
+---
+
 Interface web responsiva desenvolvida em Flutter para análise de sentimentos em tempo real.
 
 ---
@@ -138,7 +188,8 @@ docker-compose up -d
 ```
 
 O serviço web estará disponível em:
-- **URL**: http://localhost:8080
+
+- **URL**: <http://localhost:8080>
 - **Depende**: `api_service` (backend)
 
 ### Dockerfile
@@ -157,6 +208,7 @@ COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 ### Configuração do Nginx
 
 O arquivo `nginx/default.conf` está configurado para:
+
 - Servir arquivos estáticos do Flutter
 - Suportar roteamento SPA (Single Page Application)
 - Cache otimizado para assets
@@ -267,6 +319,7 @@ const String API_BASE_URL = 'http://localhost:8000';
 ### Customizar Nginx
 
 Edite `nginx/default.conf` para ajustar:
+
 - Portas
 - Cache policies
 - Redirecionamentos
@@ -286,6 +339,7 @@ Edite `nginx/default.conf` para ajustar:
 ## 🤝 Integração com o Projeto
 
 Este frontend faz parte do **Sistema de Análise de Sentimentos**. Consulte:
+
 - [README Principal](../README.md) - Visão geral do sistema
 - [README da API](../api/README.md) - Documentação do backend
 
