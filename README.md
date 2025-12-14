@@ -63,15 +63,14 @@ Veja o arquivo [LICENSE](LICENSE) para o texto legal completo da licença.
 **Navegação Rápida:**
 
 🎓 [Visão Geral](#-visão-geral) •
-🏗️ [Arquitetura do Sistema](#️-arquitetura-do-sistema) •
-🛠️ [Tecnologias Utilizadas](#️-tecnologias-utilizadas) •
+🏗️ [Arquitetura do Sistema](#%EF%B8%8F-arquitetura-do-sistema) •
+🛠️ [Tecnologias Utilizadas](#%EF%B8%8F-tecnologias-utilizadas) •
 🚀 [Quick Start](#-quick-start) •
 📁 [Estrutura do Projeto](#-estrutura-do-projeto) •
 🧩 [Componentes do Sistema](#-componentes-do-sistema) •
-🚀 [Deploy](#-deploy) •
 📚 [Documentação Detalhada](#-documentação-detalhada) •
 💻 [Desenvolvimento](#-desenvolvimento) •
-📄 [Licença](#-licença)
+📄 [Citação Acadêmica](#-citação-acadêmica)
 
 ---
 
