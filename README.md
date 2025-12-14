@@ -28,6 +28,10 @@
 
 **Data de Aprovação:** 1 de dezembro de 2025
 
+**Assunto:** Trabalho de Conclusão de Curso (Bacharelado em Ciência da Computação)
+
+**Palavras-chave:** análise de sentimentos, processamento de linguagem natural, transformers, BERT, aprendizado profundo
+
 ---
 
 ## 📄 Licença
